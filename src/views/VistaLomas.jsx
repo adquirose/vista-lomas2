@@ -9,17 +9,27 @@ import {
   InputGroup,
   Container,
   Row,
-  Col
+  Col,
+  Card,
+  CardHeader,
+  CardBody,
+  Nav,
+  NavItem, 
+  NavLink,
+  TabContent,
+  TabPane
 } from "reactstrap";
 import { PinDelete } from '../components/Icons'
 // core components
-import ExamplesNavbar from "../components/Navbars/ExamplesNavbar.js";
+import NavbarApp from "../components/Navbars/NavbarApp.jsx";
 import VistaLomasHeader from "../components/Headers/VistaLomasHeader";
-import DefaultFooter from "../components/Footers/DefaultFooter.js";
+import FooterApp from "../components/Footers/FooterApp.jsx";
 
 function VistaLomas() {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
+  const [iconPills, setIconPills] = React.useState("1");
+ 
   React.useEffect(() => {
     document.body.classList.add("landing-page");
     document.body.classList.add("sidebar-collapse");
@@ -33,7 +43,7 @@ function VistaLomas() {
   }, []);
   return (
     <>
-      <ExamplesNavbar />
+      <NavbarApp />
       <div className="wrapper">
         <VistaLomasHeader />
         <div className="section section-about-us">
@@ -66,13 +76,13 @@ function VistaLomas() {
                     className="image-container image-left"
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/login.jpg") + ")"
+                        "url(" + require("assets/images-vista-lomas/ext3.jpg") + ")"
                     }}
                   >
                     <p className="blockquote blockquote-info">
-                      "Over the span of the satellite record, Arctic sea ice has
-                      been declining significantly, while sea ice in the
-                      Antarctichas increased very slightly" <br></br>
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                      Mauris tristique pulvinar sem sit amet pulvinar. 
+                      Vestibulum non condimentum augue. " <br></br>
                       <br></br>
                       <small>-NOAA</small>
                     </p>
@@ -81,7 +91,7 @@ function VistaLomas() {
                     className="image-container"
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/bg3.jpg") + ")"
+                        "url(" + require("assets/images-vista-lomas/estar.jpg") + ")"
                     }}
                   ></div>
                 </Col>
@@ -90,50 +100,116 @@ function VistaLomas() {
                     className="image-container image-right"
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/bg1.jpg") + ")"
+                        "url(" + require("assets/images-vista-lomas/ext4.jpg") + ")"
                     }}
                   ></div>
                   <h3>
-                    So what does the new record for the lowest level of winter
-                    ice actually mean
+                    FULL CONECTIVIDAD Y ENTORNO NATURAL
                   </h3>
                   <p>
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens with climate change. Even if the
-                    Arctic continues to be one of the fastest-warming regions of
-                    the world, it will always be plunged into bitterly cold
-                    polar dark every winter. And year-by-year, for all kinds of
-                    natural reasons, there’s huge variety of the state of the
-                    ice.
+                    El proyecto cuenta con una amplia área verde interior, sector de juegos para niños, 
+                    estacionamientos para visita y seguridad 24/7.<br/><br/>
+                    Su ubicación permite una rápida y expedita conectividad a todo tipo de servicios y centros 
+                    comerciales, clubes de golf y espacios deportivos para práctica de pádel, tenis, 
+                    mountain bike y espectaculares senderos para trote y trecking.
                   </p>
-                  <p>
-                    For a start, it does not automatically follow that a record
-                    amount of ice will melt this summer. More important for
-                    determining the size of the annual thaw is the state of the
-                    weather as the midnight sun approaches and temperatures
-                    rise. But over the more than 30 years of satellite records,
-                    scientists have observed a clear pattern of decline,
-                    decade-by-decade.
-                  </p>
-                  <p>
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens with climate change. Even if the
-                    Arctic continues to be one of the fastest-warming regions of
-                    the world, it will always be plunged into bitterly cold
-                    polar dark every winter. And year-by-year, for all kinds of
-                    natural reasons, there’s huge variety of the state of the
-                    ice.
-                  </p>
+                </Col>
+              </Row>
+            </div>
+            <div>
+              <Row>
+                <Col>
+                <h3>SECTOR CONSOLIDADO CON VIDA DE BARRIO</h3>
+                  <Card>
+                    <CardHeader>
+                      <Nav className="justify-content-center" role="tablist" tabs>
+                        <NavItem>
+                          <NavLink
+                            className={iconPills === "1" ? "active" : ""}
+                            href="#pablo"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              setIconPills("1");
+                            }}
+                          >
+                            <i className="now-ui-icons objects_umbrella-13"></i>
+                            Clinicas
+                          </NavLink>
+                        </NavItem>
+                        <NavItem>
+                          <NavLink
+                            className={iconPills === "2" ? "active" : ""}
+                            href="#pablo"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              setIconPills("2");
+                            }}
+                          >
+                            <i className="now-ui-icons shopping_cart-simple"></i>
+                            Colegios
+                          </NavLink>
+                        </NavItem>
+                        <NavItem>
+                          <NavLink
+                            className={iconPills === "3" ? "active" : ""}
+                            href="#pablo"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              setIconPills("3");
+                            }}
+                          >
+                            <i className="now-ui-icons shopping_shop"></i>
+                            Malls
+                          </NavLink>
+                        </NavItem>
+                      </Nav>
+                    </CardHeader>
+                    <CardBody>
+                      <TabContent
+                        className="text-center"
+                        activeTab={"iconPills" + iconPills}
+                      >
+                        <TabPane tabId="iconPills1">
+                          <ul>
+                            <li> Meds </li>
+                            <li>Alemana</li> 
+                            <li>Santa María</li> 
+                        </ul>
+                        </TabPane>
+                        <TabPane tabId="iconPills2">
+                          <ul>
+                            <li>Craighouse</li>
+                            <li>Monte Tabor y Nazaret</li>  
+                            <li>Everest</li>
+                            <li>Santiago College</li>
+                            <li>Newland </li>
+                            <li>Los Alerces</li>
+                            <li>Huinganal</li>
+                            <li>The Mayflower School</li>
+                            <li>Nido de Águilas</li>
+                          </ul>
+                        </TabPane>
+                        <TabPane tabId="iconPills3">
+                          <ul>
+                            <li>Paseo Los Trapenses</li>
+                            <li>VIVO Los Trapenses</li>
+                            <li>Puerta Los Trapenses</li>
+                            <li>Espacio Urbano</li>
+                            <li>Portal La Dehesa</li>
+                            <li>Futuro Mall Megacentro</li>
+                          </ul>
+                        </TabPane>
+                      </TabContent>
+                    </CardBody>
+                  </Card>
                 </Col>
               </Row>
             </div>
           </Container>
         </div>
-        <div className="section section-contact-us text-center">
+        <div className="section-contact-us text-center">
           <Container>
-            <h2 className="title">Contactanos</h2>
+            <h2 className="title">Contáctanos</h2>
             <p className="description">Your project is very important to us.</p>
             <Row>
               <Col className="text-center ml-auto mr-auto" lg="6" md="8">
@@ -148,7 +224,7 @@ function VistaLomas() {
                     </InputGroupText>
                   </InputGroupAddon>
                   <Input
-                    placeholder="First Name..."
+                    placeholder="Nombre..."
                     type="text"
                     onFocus={() => setFirstFocus(true)}
                     onBlur={() => setFirstFocus(false)}
@@ -175,7 +251,7 @@ function VistaLomas() {
                   <Input
                     cols="80"
                     name="name"
-                    placeholder="Type a message..."
+                    placeholder="Escribe un mensaje..."
                     rows="4"
                     type="textarea"
                   ></Input>
@@ -189,14 +265,14 @@ function VistaLomas() {
                     onClick={(e) => e.preventDefault()}
                     size="lg"
                   >
-                    Send Message
+                    Enviar Mensaje
                   </Button>
                 </div>
               </Col>
             </Row>
           </Container>
         </div>
-        <DefaultFooter />
+        <FooterApp />
       </div>
     </>
   );

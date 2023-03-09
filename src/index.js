@@ -31,6 +31,8 @@ import LoginPage from "views/examples/LoginPage.js";
 import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import VistaLomas from "views/VistaLomas";
+import Masterplan360Page from "views/Masterplan360Page.jsx";
+import AyDPage from "views/AyDPage.jsx"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -42,6 +44,14 @@ root.render(
         <Route
           path="/vista-lomas"
           render={(props) => <VistaLomas {...props} />}
+        />
+        <Route
+          path="/ayd"
+          render={(props) => <AyDPage {...props} />}
+        />
+        <Route
+          path="/masterplan360"
+          render={(props) => <Masterplan360Page {...props} />}
         />
         <Route
           path="/nucleo-icons"

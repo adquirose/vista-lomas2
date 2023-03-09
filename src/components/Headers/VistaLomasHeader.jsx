@@ -1,5 +1,5 @@
 import React from "react";
-
+import Logo from "../../assets/images-vista-lomas/logo.png";
 // reactstrap components
 import { Button, Container } from "reactstrap";
 
@@ -33,7 +33,7 @@ function VistaLomasHeader() {
         ></div>
         <div className="content-center">
           <Container>
-            <h1 className="title">Vista Lomas</h1>
+            <img style={{width:'110px'}} src={Logo} alt="logo" />
             <div className="text-center">
               <Button
                 className="btn-icon btn-round"

@@ -4,4 +4,6 @@ import PinDelete from "./PinDelete";
 import PropertyLocation from "./PropertyLocation";
 import Mail from "./Mail"
 import MobilePhone from "./MobilePhone"
-export { Menu8, ERemove, PinDelete, PropertyLocation, Mail, MobilePhone }
+import Hospital33 from "./Hospital33";
+import Book from "./Book";
+export { Book, Hospital33, Menu8, ERemove, PinDelete, PropertyLocation, Mail, MobilePhone }

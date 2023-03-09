@@ -15,7 +15,7 @@ function DarkFooter() {
                 href=""
                 target="_blank"
               >
-                <PropertyLocation width="22px" height="22px"/>
+                <PropertyLocation width="24px" height="24px"/>
                 <span className="px-2 pt-1 text-info">
                     Avenida la Dehesa 1201, Oficina 709, Edificio Oriente. Santiago.
                 </span>
@@ -41,7 +41,7 @@ function DarkFooter() {
             </li>
           </ul>
         </nav>
-        <div className="copyright" id="copyright">
+        <div className="copyright pt-3" id="copyright">
           © {new Date().getFullYear()},
           <a
             href=""

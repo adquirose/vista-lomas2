@@ -99,20 +99,22 @@ function VistaLomas() {
                   <div
                     className="image-container image-right"
                     style={{
-                      backgroundImage:
-                        "url(" + require("assets/images-vista-lomas/ext4.jpg") + ")"
+                    backgroundImage:
+                      "url(" + require("assets/images-vista-lomas/ext4.jpg") + ")"
                     }}
                   ></div>
-                  <h3>
-                    FULL CONECTIVIDAD Y ENTORNO NATURAL
-                  </h3>
-                  <p>
-                    El proyecto cuenta con una amplia área verde interior, sector de juegos para niños, 
-                    estacionamientos para visita y seguridad 24/7.<br/><br/>
-                    Su ubicación permite una rápida y expedita conectividad a todo tipo de servicios y centros 
-                    comerciales, clubes de golf y espacios deportivos para práctica de pádel, tenis, 
-                    mountain bike y espectaculares senderos para trote y trecking.
-                  </p>
+                  <div className="pt-3 pt-sm-0" >
+                    <h3>
+                      FULL CONECTIVIDAD Y ENTORNO NATURAL
+                    </h3>
+                    <p>
+                      El proyecto cuenta con una amplia área verde interior, sector de juegos para niños, 
+                      estacionamientos para visita y seguridad 24/7.<br/><br/>
+                      Su ubicación permite una rápida y expedita conectividad a todo tipo de servicios y centros 
+                      comerciales, clubes de golf y espacios deportivos para práctica de pádel, tenis, 
+                      mountain bike y espectaculares senderos para trote y trecking.
+                    </p>
+                  </div>
                 </Col>
               </Row>
             </div>
@@ -132,7 +134,7 @@ function VistaLomas() {
                               setIconPills("1");
                             }}
                           >
-                            <i className="now-ui-icons objects_umbrella-13"></i>
+                            <i className="now-ui-icons health_ambulance"></i>
                             Clinicas
                           </NavLink>
                         </NavItem>
@@ -145,7 +147,7 @@ function VistaLomas() {
                               setIconPills("2");
                             }}
                           >
-                            <i className="now-ui-icons shopping_cart-simple"></i>
+                            <i className="now-ui-icons education_agenda-bookmark"></i>
                             Colegios
                           </NavLink>
                         </NavItem>
@@ -170,33 +172,33 @@ function VistaLomas() {
                         activeTab={"iconPills" + iconPills}
                       >
                         <TabPane tabId="iconPills1">
-                          <ul>
-                            <li> Meds </li>
-                            <li>Alemana</li> 
-                            <li>Santa María</li> 
+                          <ul className="list-group">
+                            <li className="list-group-item"> Meds </li>
+                            <li className="list-group-item">Alemana</li> 
+                            <li className="list-group-item">Santa María</li> 
                         </ul>
                         </TabPane>
                         <TabPane tabId="iconPills2">
-                          <ul>
-                            <li>Craighouse</li>
-                            <li>Monte Tabor y Nazaret</li>  
-                            <li>Everest</li>
-                            <li>Santiago College</li>
-                            <li>Newland </li>
-                            <li>Los Alerces</li>
-                            <li>Huinganal</li>
-                            <li>The Mayflower School</li>
-                            <li>Nido de Águilas</li>
+                          <ul className="list-group">
+                            <li className="list-group-item">Craighouse</li>
+                            <li className="list-group-item">Monte Tabor y Nazaret</li>  
+                            <li className="list-group-item">Everest</li>
+                            <li className="list-group-item">Santiago College</li>
+                            <li className="list-group-item">Newland </li>
+                            <li className="list-group-item">Los Alerces</li>
+                            <li className="list-group-item">Huinganal</li>
+                            <li className="list-group-item">The Mayflower School</li>
+                            <li className="list-group-item">Nido de Águilas</li>
                           </ul>
                         </TabPane>
                         <TabPane tabId="iconPills3">
-                          <ul>
-                            <li>Paseo Los Trapenses</li>
-                            <li>VIVO Los Trapenses</li>
-                            <li>Puerta Los Trapenses</li>
-                            <li>Espacio Urbano</li>
-                            <li>Portal La Dehesa</li>
-                            <li>Futuro Mall Megacentro</li>
+                          <ul className="list-group">
+                            <li className="list-group-item">Paseo Los Trapenses</li>
+                            <li className="list-group-item">VIVO Los Trapenses</li>
+                            <li className="list-group-item">Puerta Los Trapenses</li>
+                            <li className="list-group-item">Espacio Urbano</li>
+                            <li className="list-group-item">Portal La Dehesa</li>
+                            <li className="list-group-item">Futuro Mall Megacentro</li>
                           </ul>
                         </TabPane>
                       </TabContent>

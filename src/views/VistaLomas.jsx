@@ -1,5 +1,4 @@
 import React from "react";
-
 // reactstrap components
 import {
   Button,
@@ -50,10 +49,10 @@ function VistaLomas() {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="8">
-                <h2 className='text-center'>
+                <h3 className='text-center'>
                     <PinDelete width={24} height={24} color={'red'}/>
                     LOS LITRES Nº 1800, <br/>LA DEHESA
-                </h2>
+                </h3>
                 <h5 className='text-black'>
                     Vista Lomas un proyecto exclusivo inserto en un entorno natural con vistas panoramicas
                     al valle de los trapenses, cerro Manquehue, lomajes precordilleranos.
